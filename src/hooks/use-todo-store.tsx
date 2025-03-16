@@ -1,7 +1,6 @@
 // Custom hook to access the store state
 import {todoStore} from "@/lib/store/todo-store.ts";
 import {useEffect, useState} from "react";
-import {useSelector} from "@xstate/store/react";
 import {Todo, TodoFilter} from "@/lib/types.ts";
 
 // Custom hook to access the store state
@@ -19,11 +18,11 @@ export function useTodoStore<T>(selector: (state: { context: { todos: Todo[]; fi
 
 // Convenience selectors
 export function useTodoFilter() {
-	return useStore((state) => state.context.filter)
+	return useTodoStore((state) => state.context.filter)
 }
 
 export function useFilteredTodos() {
-	return useStore((state) => {
+	return useTodoStore((state) => {
 		const allTodos = state.context.todos
 		const filter = state.context.filter
 
