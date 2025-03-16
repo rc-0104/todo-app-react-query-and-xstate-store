@@ -93,7 +93,7 @@ export default function TodoItem({ todo }: TodoItemProps) {
 
 	return (
 		<Card className={`${todo.completed ? "bg-muted/50" : ""}`}>
-			<CardContent className="p-4 flex items-center justify-between">
+			<CardContent className="flex items-center justify-between">
 				<div className="flex items-center gap-3 flex-1">
 					<Checkbox
 						id={`todo-${todo.id}`}

@@ -4,7 +4,7 @@ import Todo from "@/page/todo.tsx";
 function App() {
 
   return (
-      <div className="flex flex-col items-center justify-center min-h-svh">
+      <div className="min-h-svh">
           <Todo />
       </div>
   )
