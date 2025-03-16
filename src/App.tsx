@@ -1,11 +1,11 @@
 import './App.css'
-import {Button} from "@/components/ui/button.tsx";
+import Todo from "@/page/todo.tsx";
 
 function App() {
 
   return (
       <div className="flex flex-col items-center justify-center min-h-svh">
-          <Button>Click me</Button>
+          <Todo />
       </div>
   )
 }
