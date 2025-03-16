@@ -35,3 +35,12 @@ export const todoStore = createStore({
 		})
 	}
 })
+
+// Helper functions to send events to the store
+export const todoActions = {
+	setTodos: (todos: Todo[]) => todoStore.send({ type: "SET_TODOS", todos }),
+	addTodo: (todo: Todo) => todoStore.send({ type: "ADD_TODO", todo }),
+	updateTodo: (todo: Todo) => todoStore.send({ type: "UPDATE_TODO", todo }),
+	deleteTodo: (id: number) => todoStore.send({ type: "DELETE_TODO", id }),
+	setFilter: (filter: TodoFilter) => todoStore.send({ type: "SET_FILTER", filter }),
+}
